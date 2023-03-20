@@ -28,7 +28,7 @@ public class ej5Main {
         return ("numero maximo: " + max + "\n numero minimo: " + min + "\n promedio: " + promedio);
     }
 
-    public static incisoB metodoB(incisoB B, int[] vect) {
+    public static incisosByC metodoB(incisosByC B, int[] vect){
         int max = 0, min = 9999, total = 0, aux;
 
         for (int i = 0; i < vect.length; i++) {
@@ -69,11 +69,11 @@ public class ej5Main {
         //inciso A
         System.out.println("Inciso A: \n" + incisoA(array));
         //inciso b
-        incisoB B = new incisoB();
+        incisosByC B = new incisosByC();
         metodoB(B, array);
         System.out.println(B.toString());
         //inciso c
-        incisoB C = new incisoB();
+        incisosByC C = new incisosByC();
         C.incisoC();
         System.out.println("Inciso C \n max: "+C.getMax() +"\n min: "+C.getMin()+"\n promedio: "+C.getPromedio());
     }

@@ -1,15 +1,15 @@
 package Ejercicio5;
 
-public class incisoB {
+public class incisosByC {
 
     private int min;
     private int max;
     private double promedio;
 
-    public incisoB() {
+    public incisosByC() {
     }
 
-    public incisoB(int min, int max, double promedio) {
+    public incisosByC(int min, int max, double promedio) {
         this.min = min;
         this.max = max;
         this.promedio = promedio;
