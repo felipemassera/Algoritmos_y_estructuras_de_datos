@@ -34,6 +34,7 @@ public class ej2 {
         } else {
             System.out.println("EL numero debe ser mayor o igual a 1");
         }
+        leer.close();
     }
 
 }
