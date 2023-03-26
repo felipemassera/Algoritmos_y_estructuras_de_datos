@@ -4,13 +4,13 @@ public class Test {
 
     public static void mostrarE(Estudiante[] e, int cant) {
         for (int i = 0; i < cant; i++) {
-            System.out.println((i+1)+"- "+e[i].tusDatos());
+            System.out.println((i + 1) + "- " + e[i].tusDatos());
         }
     }
 
     public static void mostrarP(Profesor[] p, int cant) {
         for (int i = 0; i < cant; i++) {
-            System.out.println((i+1)+"- "+p[i].tusDatos());
+            System.out.println((i + 1) + "- " + p[i].tusDatos());
         }
     }
 
@@ -36,11 +36,11 @@ public class Test {
         int e = 2, p = 3;
         Estudiante[] vectorE = new Estudiante[e];
         Profesor[] vectorP = new Profesor[p];
-        
+
         //Cargo los vectores
         cargoEstudiantes(vectorE);
         cargoProfesor(vectorP);
-        
+
         // Muestro los vectores
         mostrarE(vectorE, e);
         mostrarP(vectorP, p);

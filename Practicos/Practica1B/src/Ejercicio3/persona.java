@@ -1,6 +1,6 @@
 package Ejercicio3;
 
-public class persona {
+public abstract class persona {
 
     String nombre;
     String apellido;
@@ -38,6 +38,8 @@ public class persona {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public abstract String tusDatos();
 
     @Override
     public String toString() {

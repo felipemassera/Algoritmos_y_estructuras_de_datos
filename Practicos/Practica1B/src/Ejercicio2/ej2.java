@@ -4,10 +4,6 @@ package Ejercicio2;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Felipe
- */
 public class ej2 {
 
     public static void metodo(int[] vector, int value) {

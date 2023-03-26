@@ -10,34 +10,31 @@ public class ej1 {
         int num1 = leer.nextInt();
         System.out.print("ingrese num2: ");
         int num2 = leer.nextInt();
-        numeros n = new numeros(num1, num2);
-        System.out.println(n.toString(num1, num2));
-       
-        if (num1 != num2) {
-            int opcion;
 
-            do {
-                n.menu();
-                opcion = leer.nextInt();
-                switch (opcion) {
-                    case 1:
-                        n.aFor(num1, num2); //inciso A  
-                        break;
-                    case 2:
-                        n.bWhile(num1, num2); //inciso B
-                        break;
-                    case 3:
-                        n.cNada(num1, num2); //inciso C
-                        break;
-                    case 4:
-                        System.out.println("Saliste");
-                        break;
-                    default:
-                        System.out.println("no es una opcion valida");
-                        ;
-                }
-            } while (opcion != 4);
+        int opcion;
+        do {
+            servicio.menu();
+            opcion = leer.nextInt();
+            switch (opcion) {
+                case 1:
+                    System.out.println("Inciso A --> FOR");
+                    servicio.aFor(num1, num2); //inciso A  
+                    break;
+                case 2:
+                    System.out.println("Inciso B --> WHILE");
+                    servicio.bWhile(num1, num2); //inciso B
+                    break;
+                case 3:
+                    System.out.println("Inciso C --> Recursion");
+                    servicio.cRecursion(num1, num2); //inciso C
+                    break;
+                case 4:
+                    System.out.println("Saliste");
+                    break;
+                default:
+                    System.out.println("no es una opcion valida");
+            }
+        } while (opcion != 4);
 
-        }
     }
 }
