@@ -1,7 +1,7 @@
 package ejercicio1;
 
-import tp02.ejercicio1.ListaDeEnteros;
-import tp02.ejercicio1.ListaDeEnterosConArreglos;
+import ListasDeEnteros.ListaDeEnteros;
+import ListasDeEnteros.ListaDeEnterosConArreglos;
 
 public class Inciso1o5 {
 

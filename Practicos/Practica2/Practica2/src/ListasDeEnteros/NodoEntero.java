@@ -1,4 +1,4 @@
-package tp02.ejercicio1;
+package ListasDeEnteros;
 
 public class NodoEntero {
 	private Integer dato;

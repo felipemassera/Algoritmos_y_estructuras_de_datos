@@ -1,5 +1,5 @@
 
-import tp02.ejercicio1.ListaDeEnterosEnlazada;
+import ListasDeEnteros.ListaDeEnterosEnlazada;
 
 public class Inciso1o6 {
 

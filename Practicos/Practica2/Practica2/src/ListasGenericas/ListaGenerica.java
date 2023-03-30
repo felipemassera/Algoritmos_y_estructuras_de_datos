@@ -1,4 +1,4 @@
-package tp02.ejercicio2;
+package ListasGenericas;
 
 
 public abstract class ListaGenerica<T> {
@@ -111,7 +111,6 @@ public abstract class ListaGenerica<T> {
 
 	/**
 	 * Devuelve una lista sin elementos.
-	 * **/
-
-
+	 */
+        public abstract boolean agregar(T [] elem);
 }

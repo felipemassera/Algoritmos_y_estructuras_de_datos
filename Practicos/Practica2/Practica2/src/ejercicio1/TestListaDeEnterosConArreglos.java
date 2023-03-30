@@ -1,6 +1,7 @@
 package ejercicio1;
 
-import tp02.ejercicio1.ListaDeEnterosConArreglos;
+import ListasDeEnteros.ListaDeEnterosConArreglos;
+
 
 public class TestListaDeEnterosConArreglos {
 

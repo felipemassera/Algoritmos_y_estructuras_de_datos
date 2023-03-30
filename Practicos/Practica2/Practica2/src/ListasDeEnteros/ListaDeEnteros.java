@@ -1,4 +1,4 @@
-package tp02.ejercicio1;
+package ListasDeEnteros;
 
 public abstract class ListaDeEnteros {
 	
@@ -18,5 +18,5 @@ public abstract class ListaDeEnteros {
 	public abstract boolean incluye(Integer elem);
 	public abstract boolean esVacia();
 	public abstract int tamanio();
-
+        public abstract boolean agregar(int []elem);
 }

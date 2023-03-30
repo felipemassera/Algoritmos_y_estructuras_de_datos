@@ -2,7 +2,8 @@
  */
 package ejercicio1;
 
-import tp02.ejercicio1.ListaDeEnterosEnlazada;
+import ListasDeEnteros.ListaDeEnterosEnlazada;
+
 
 public class TestListaDeEnterosEnlazada {
 

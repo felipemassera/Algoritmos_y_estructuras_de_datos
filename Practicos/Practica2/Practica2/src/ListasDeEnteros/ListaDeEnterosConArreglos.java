@@ -1,4 +1,6 @@
-package tp02.ejercicio1;
+package ListasDeEnteros;
+
+import ListasDeEnteros.ListaDeEnteros;
 
 public class ListaDeEnterosConArreglos extends ListaDeEnteros {
 	
@@ -110,5 +112,14 @@ public class ListaDeEnterosConArreglos extends ListaDeEnteros {
 	public int tamanio() {
 		return tamanio;
 	}
+
+    @Override
+    public boolean agregar(int[] elem) {
+        for (int i : elem) {
+            this.agregarFinal(i);
+        }
+        return true;
+    }
+    
 
 }
