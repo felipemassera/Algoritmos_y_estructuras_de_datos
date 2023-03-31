@@ -18,10 +18,6 @@ public class Inciso1o6 {
         return le;
     }
     
-    
-    public static void calcularSucesion(ListaDeEnterosEnlazada<Integer> sucesion, Integer n){
-        
-    }
     public static void main(String[] args) {
         
         ListaDeEnterosEnlazada le= calcularSucesion(6);

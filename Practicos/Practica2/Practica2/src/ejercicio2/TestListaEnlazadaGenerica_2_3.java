@@ -4,6 +4,7 @@ package ejercicio2;
 
 import ListasGenericas.ListaEnlazadaGenerica;
 import ejercicio2.Estudiante;
+import java.util.Scanner;
 
 /**
  *
@@ -26,9 +27,25 @@ public class TestListaEnlazadaGenerica_2_3 {
         /**
          * Prueba del inciso 2.4 (Test OK)
          */
+        /**
         Estudiante [] est = new Estudiante[4];
         est[0]=e1; est[1]=e1; est[2]=e3;est[3]=e4;
         System.out.println(le.agregar(est));
-        System.out.println("tamanio lista: "+le.tamanio());
+        System.out.println("tamanio lista: "+le.tamanio());*/
+        
+        Scanner leer = new Scanner(System.in);
+        int num;
+        try{
+        
+          num = leer.nextInt();
+          System.out.println(num);
+        
+        
+        
+        
+        } catch (Exception e){
+            System.out.println("no es numero");
+        }
+        
     }
 }

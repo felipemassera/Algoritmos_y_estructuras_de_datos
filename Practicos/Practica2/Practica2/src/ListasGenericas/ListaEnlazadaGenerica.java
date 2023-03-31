@@ -254,7 +254,7 @@ public class ListaEnlazadaGenerica<T> extends ListaGenerica<T> {
     }
 
     @Override
-    public boolean agregar(T [] elem) {
+    public boolean agregar(T [] elem) {       
         try {
             for (T object : elem) {
                 this.agregarFinal((T) elem);

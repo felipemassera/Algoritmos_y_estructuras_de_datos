@@ -11,7 +11,7 @@ package ListasGenericas;
  */
 public class PilaGenerica<T> {
 
-    private ListaEnlazadaGenerica<T> dato;
+    private ListaEnlazadaGenerica<T> dato = new ListaEnlazadaGenerica<>();
 
     public PilaGenerica() {
     }

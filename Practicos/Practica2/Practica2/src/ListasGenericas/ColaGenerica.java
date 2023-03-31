@@ -2,7 +2,7 @@ package ListasGenericas;
 
 public class ColaGenerica<T> {
 
-    ListaEnlazadaGenerica<T> dato;
+    ListaEnlazadaGenerica<T> dato= new ListaEnlazadaGenerica<>();
 
     public ColaGenerica() {
     }
