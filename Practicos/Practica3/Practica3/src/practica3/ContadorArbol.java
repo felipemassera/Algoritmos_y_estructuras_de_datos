@@ -14,29 +14,6 @@ public class ContadorArbol {
         this.a = arbol;
     }
 
-    public void numerosParesPosOrden(ArbolBinario<Integer> a, ListaEnlazadaGenerica<Integer> l) {
-        if (a.tieneHijoIzquierdo()) {
-            numerosParesInOrden(a.getHijoIzquierdo(), l);
-        }
-        if (a.tieneHijoDerecho()) {
-            numerosParesInOrden(a.getHijoDerecho(), l);
-        }
-        if (a.getDato() % 2 == 0) {
-            l.agregarFinal(a.getDato());
-        }
-    }
-
-    public void numerosParesInOrden(ArbolBinario<Integer> a, ListaEnlazadaGenerica<Integer> l) {
-        if (a.tieneHijoIzquierdo()) {
-            numerosParesInOrden(a.getHijoIzquierdo(), l);
-        }
-        if (a.getDato() % 2 == 0) {
-            l.agregarFinal(a.getDato());
-        }
-        if (a.tieneHijoDerecho()) {
-            numerosParesInOrden(a.getHijoDerecho(), l);
-        }
-    }
 
     public ListaEnlazadaGenerica numerosPares() {
         ListaEnlazadaGenerica<Integer> l = new ListaEnlazadaGenerica();
@@ -45,6 +22,17 @@ public class ContadorArbol {
         }
         return l;
     }
+    private void numerosParesInOrden(ArbolBinario<Integer> a, ListaEnlazadaGenerica<Integer> l) {
+        if (a.tieneHijoIzquierdo()) {
+            numerosParesInOrden(a.getHijoIzquierdo(), l);
+        }
+        if (a.getDato() % 2 == 0) {
+            l.agregarFinal(a.getDato());
+        }
+        if (a.tieneHijoDerecho()) {
+            numerosParesInOrden(a.getHijoDerecho(), l);
+        }
+    }
 
     public ListaEnlazadaGenerica numerosPares2() {
         ListaEnlazadaGenerica<Integer> l = new ListaEnlazadaGenerica();
@@ -52,5 +40,16 @@ public class ContadorArbol {
             numerosParesPosOrden(a, l);
         }
         return l;
+    }
+    private void numerosParesPosOrden(ArbolBinario<Integer> a, ListaEnlazadaGenerica<Integer> l) {
+        if (a.tieneHijoIzquierdo()) {
+            numerosParesPosOrden(a.getHijoIzquierdo(), l);
+        }
+        if (a.tieneHijoDerecho()) {
+            numerosParesPosOrden(a.getHijoDerecho(), l);
+        }
+        if (a.getDato() % 2 == 0) {
+            l.agregarFinal(a.getDato());
+        }
     }
 }
