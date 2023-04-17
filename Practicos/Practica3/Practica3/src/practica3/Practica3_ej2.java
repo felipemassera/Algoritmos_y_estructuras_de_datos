@@ -28,15 +28,15 @@ public class Practica3_ej2 {
 //        invertido.inOrden();
 //        a.entreNiveles(0,442);
         
-        ArbolBinario<Integer> otroArbol = new ArbolBinario<Integer>(1);
+        ArbolBinario<Integer> otroArbol = new ArbolBinario(1);
         
-        ArbolBinario<Integer> hi = new ArbolBinario<Integer>(2);
-        hi.agregarHijoIzquierdo(new ArbolBinario<Integer>(3));
-        hi.agregarHijoDerecho(new ArbolBinario<Integer>(4));
+        ArbolBinario<Integer> hi = new ArbolBinario(2);
+        hi.agregarHijoIzquierdo(new ArbolBinario(3));
+        hi.agregarHijoDerecho(new ArbolBinario(4));
         
-        ArbolBinario<Integer> hd = new ArbolBinario<Integer>(5);
-        hd.agregarHijoIzquierdo(new ArbolBinario<Integer>(6));
-        hd.agregarHijoDerecho(new ArbolBinario<Integer>(7));
+        ArbolBinario<Integer> hd = new ArbolBinario(5);
+        hd.agregarHijoIzquierdo(new ArbolBinario(6));
+        hd.agregarHijoDerecho(new ArbolBinario(7));
         
         otroArbol.agregarHijoIzquierdo(hi);
         otroArbol.agregarHijoDerecho(hd);

@@ -174,4 +174,19 @@ public class ArbolBinario<T> {
         }
         System.out.println(" dato: " + this.dato);
     }
+    
+    private Integer alturaMaxArbol(ArbolBinario<Integer> a){
+        int rd=0 , ri =0;
+        if (a.esHoja()){
+            return 0;
+        }else{
+            if (a.tieneHijoIzquierdo()){
+                ri= 1+ alturaMaxArbol(a.getHijoIzquierdo());
+            }
+            if (a.tieneHijoDerecho()){
+                rd=1+alturaMaxArbol(a.getHijoDerecho());
+            }
+        }
+        return  Math.max(ri, rd);
+    }
 }
