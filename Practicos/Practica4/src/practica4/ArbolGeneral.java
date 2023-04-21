@@ -69,13 +69,32 @@ public class ArbolGeneral<T> {
 		}
 	}
 	
+	public void inOrden(ArbolGeneral<Integer> a) {
+            ListaGenerica <ArbolGeneral<Integer>> hijos = a.getHijos();
+            hijos.comenzar();
+            if(! hijos.esVacia()){   
+            inOrden(hijos.proximo());
+            }
+            System.out.println(a.getDato());
+            while (!hijos.fin()){
+                inOrder(hijos.proximo());
+            }
+            
+	}
 	public ListaEnlazadaGenerica<T> preOrden() {
 		return null;
 	}
 	
 	public Integer altura() {
-		// Falta implementar..
+		if (this.esHoja() )
 		return 0;
+                else{
+                    int max=-9999;
+                    hijos = getHijos();
+                    while(!hijos.fin());
+                        int cant= 1+ hijos.proximo().altura();
+                        max= Math.max(cant, max);
+                }
 	}
 
 	public Integer nivel(T dato) {
