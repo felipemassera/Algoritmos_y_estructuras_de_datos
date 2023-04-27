@@ -17,10 +17,11 @@ public class ej6 {
     public static void main(String[] args) {
         ArbolDePrueba ap = new ArbolDePrueba();
         ArbolGeneral<Integer> arbol = ap.getArbol();
-        arbol.preOrden();
+        //arbol.preOrden();
+        
         System.out.println("");
         
-        System.out.println("Son familia? "+ arbol.esAncestro(7,22));
+        System.out.println("Son familia? "+ arbol.esAncestro(7,224));
     }
      /*  Diagrama del arbol de prueba
                 7    

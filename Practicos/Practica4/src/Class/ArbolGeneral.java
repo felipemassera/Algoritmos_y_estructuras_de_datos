@@ -228,7 +228,7 @@ public class ArbolGeneral<T> {
         ArbolGeneral<T> ancestro = null;
         if (!this.esVacio()) {
             ancestro = buscarNodo(this, a);
-            if (!ancestro.esVacio()) {
+            if (ancestro!=null) {
                 ancestro = buscarNodo(ancestro, b);
             }
         }
@@ -244,6 +244,7 @@ public class ArbolGeneral<T> {
                 ListaGenerica<ArbolGeneral<T>> hijos = arbol.getHijos();
                 hijos.comenzar();
                 while (!hijos.fin()) {
+                    System.out.println(aux.getDato());
                     aux = buscarNodo(hijos.proximo(), dato);
                     if (aux!=null) {
                         return aux;
