@@ -32,7 +32,7 @@ public class RedDeAguaPotable{
             ListaGenerica<ArbolGeneral<Double>> hijos = a.getHijos();
             hijos.comenzar();
             caudal = a.getDato()/ hijos.tamanio();
-            while (!hijos.fin()) {       
+            while (!hijos.fin()) {
                 min = Math.min(recorrido(hijos.proximo(),caudal), min);
             }
         }

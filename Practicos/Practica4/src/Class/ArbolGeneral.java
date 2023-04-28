@@ -21,6 +21,8 @@ public class ArbolGeneral<T> {
         }
     }
 
+    public ArbolGeneral() {  //CREO ESTE CONSTRUCTOR PARA PODER REALIZAR ARBOLES VACIOS EJ6
+    }
     public ArbolGeneral(T dato) {
         this.dato = dato;
     }
@@ -225,18 +227,18 @@ public class ArbolGeneral<T> {
     }
 ///////////////////////////////////////////////////////////////////////////////////
     public Boolean esAncestro(T a, T b) {
-        ArbolGeneral<T> ancestro = null;
+        ArbolGeneral<T> ancestro = new ArbolGeneral<>();
         if (!this.esVacio()) {
             ancestro = buscarNodo(this, a);
-            if (ancestro!=null) {
+            if (!ancestro.esVacio()) {
                 ancestro = buscarNodo(ancestro, b);
             }
         }
-        return ancestro!=null;
+        return !ancestro.esVacio();
     }
     
     private ArbolGeneral<T> buscarNodo(ArbolGeneral<T> arbol, T dato) {
-        ArbolGeneral<T> aux = null;
+        ArbolGeneral<T> aux = new ArbolGeneral<>();
         if (arbol.getDato() == dato) {
             return arbol;
         } else {
@@ -244,9 +246,8 @@ public class ArbolGeneral<T> {
                 ListaGenerica<ArbolGeneral<T>> hijos = arbol.getHijos();
                 hijos.comenzar();
                 while (!hijos.fin()) {
-                    System.out.println(aux.getDato());
                     aux = buscarNodo(hijos.proximo(), dato);
-                    if (aux!=null) {
+                    if (!aux.esVacio()) {
                         return aux;
                     }
                 }
