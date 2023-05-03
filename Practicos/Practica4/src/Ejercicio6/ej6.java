@@ -21,7 +21,7 @@ public class ej6 {
         
         System.out.println("");
         
-        System.out.println("Son familia? "+ arbol.esAncestro(7,22));
+        System.out.println("Son familia? "+ arbol.esAncestro(7,287));
     }
      /*  Diagrama del arbol de prueba
                 7    

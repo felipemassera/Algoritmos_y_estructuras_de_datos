@@ -3,7 +3,7 @@ package practica3;
 /**
  * recorridos in order pre orden = r-i-d in orden = i-r-d pos-orden = i-d-r
  */
-import ListasGenericas.ArbolBinario;
+import Class.ArbolBinario;
 import ListasGenericas.ListaEnlazadaGenerica;
 
 public class ContadorArbol {

@@ -1,6 +1,5 @@
-package ListasGenericas;
+package Class;
 
-import ListasGenericas.ColaGenerica;
 
 public class ArbolBinario<T> {
 

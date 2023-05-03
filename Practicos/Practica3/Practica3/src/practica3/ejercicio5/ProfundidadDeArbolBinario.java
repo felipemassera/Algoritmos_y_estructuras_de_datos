@@ -7,7 +7,7 @@
  */
 package practica3.ejercicio5;
 
-import ListasGenericas.ArbolBinario;
+import Class.ArbolBinario;
 import ListasGenericas.ColaGenerica;
 
 public class ProfundidadDeArbolBinario {

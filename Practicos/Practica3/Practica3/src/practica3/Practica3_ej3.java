@@ -2,7 +2,7 @@
  */
 package practica3;
 
-import ListasGenericas.ArbolBinario;
+import Class.ArbolBinario;
 import ListasGenericas.ListaEnlazadaGenerica;
 
 /**

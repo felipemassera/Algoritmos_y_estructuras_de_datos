@@ -3,7 +3,7 @@
 
 package practica3.ejercicio4;
 
-import ListasGenericas.ArbolBinario;
+import Class.ArbolBinario;
 
 
 public class RedBinariaLlena {

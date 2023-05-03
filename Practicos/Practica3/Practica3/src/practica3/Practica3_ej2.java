@@ -1,6 +1,6 @@
 package practica3;
 
-import ListasGenericas.ArbolBinario;
+import Class.ArbolBinario;
 
 public class Practica3_ej2 {
     
