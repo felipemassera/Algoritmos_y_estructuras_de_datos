@@ -9,37 +9,37 @@ public class TodosCaminosMasLejanos {
     public ListaGenerica<ListaGenerica<Integer>> resolver(ArbolGeneral<Integer> arbol) {
         ListaGenerica<ListaGenerica<Integer>> caminos = new ListaEnlazadaGenerica();
         if (!arbol.esVacio()) {
-            int hMax = arbol.altura();
-            System.out.println("altura max" + hMax);
-            caminos = resolver(arbol, 0, hMax);
+            ListaGenerica<Integer> camino = new ListaEnlazadaGenerica<>();
+            caminos.agregarFinal(new ListaEnlazadaGenerica<>());
+            resolver(arbol, caminos, camino);
         }
         return caminos;
     }
 
-    private ListaGenerica<ListaGenerica<Integer>> resolver(ArbolGeneral<Integer> a, int nivel, int hMax) {
-        ListaGenerica<ListaGenerica<Integer>> caminos = new ListaEnlazadaGenerica<>();
+    private void resolver(ArbolGeneral<Integer> a, ListaGenerica<ListaGenerica<Integer>> caminos, ListaGenerica<Integer> camAct) {
+        camAct.agregarFinal(a.getDato());
         if (!a.esHoja()) {
             ListaGenerica<ArbolGeneral<Integer>> h = a.getHijos();
             h.comenzar();
             while (!h.fin()) {
-                ListaGenerica<ListaGenerica<Integer>> aux = resolver(h.proximo(),nivel+1,hMax);
-                aux.comenzar();
-                while (!aux.fin()) {
-                    caminos.agregarInicio(aux.proximo());
+                resolver(h.proximo(), caminos, camAct);
+            }
+        } else {
+            if (camAct.tamanio() >= caminos.elemento(1).tamanio()) {
+                if (camAct.tamanio() > caminos.elemento(1).tamanio()) {
+                    caminos.comenzar();
+                    while (!caminos.fin()) {
+                        caminos.eliminar(caminos.proximo());
+                    }
                 }
+                caminos.agregarFinal(camAct.clonar());
             }
-            caminos.comenzar();
-            while (!caminos.fin()) {
-                caminos.proximo().agregarInicio(a.getDato());
-            }
-        } else if (nivel == hMax) {
-            ListaGenerica<Integer> camino = new ListaEnlazadaGenerica<>();
-            camino.agregarInicio(a.getDato());
-            caminos.agregarInicio(camino);
         }
-        return caminos;
+        camAct.eliminarEn(camAct.tamanio());
     }
 }
+
+
 /*  Diagrama del arbol de prueba
                 7    
                 |    

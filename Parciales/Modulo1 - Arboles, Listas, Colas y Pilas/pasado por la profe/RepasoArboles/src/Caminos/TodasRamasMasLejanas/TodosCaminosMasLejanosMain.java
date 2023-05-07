@@ -1,6 +1,6 @@
 package Caminos.TodasRamasMasLejanas;
 
-import Caminos.RamaMasLejana.HojaMasLejana;
+import Caminos.RamaMasLejana.HojaMasLejanaGeneral;
 import Class.ArbolDePrueba;
 import Class.ListaGenerica;
 
@@ -12,7 +12,6 @@ public class TodosCaminosMasLejanosMain {
 
         ListaGenerica<ListaGenerica<Integer>> caminos = t.resolver(a.getArbol());
         caminos.comenzar();
-        System.out.println("TAMANIO LISTA "+ caminos.tamanio());
         int centinela = 1;
         //MAIN
         while (!caminos.fin()) {

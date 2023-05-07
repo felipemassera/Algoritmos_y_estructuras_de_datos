@@ -12,11 +12,12 @@ public class Ejercicio7 {
         ListaGenerica<Datos> lista = parcial.resolver(14,200,p.getArbol());
         lista.comenzar();
         while (!lista.fin()) {
-            
             System.out.println(lista.proximo().toString());
         }
         
-        
+        System.out.println("ENTRENIVELES");
+        EntreNiveles e = new EntreNiveles();
+         System.out.println(e.resolver(1, 200, p.getArbol()));
     }
     
 }

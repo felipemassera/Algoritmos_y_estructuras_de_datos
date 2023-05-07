@@ -4,11 +4,15 @@
  * nivel en el que se encuentra.
  * El rango de valores es cerrado, por lo cual, si el elemento del árbol es igual a uno de los extremos,
  * también se lo debe incluir en el resultado. Considerar que el árbol podría estar vacío, que ningún
- * elemento del árbol o todos los elementos del árbol podrían cumplir la condición. Realice un recorrido
- * en postorden.
+ * elemento del árbol o todos los elementos del árbol podrían cumplir la condición. 
+ * 
+ * Realice un recorrido en postorden.
+ * 
  * El método debe tener la siguiente firma, por lo cual, siempre debe retornar una lista, ya sea que haya o
  * no elementos para retornar.
+ *
  * resolver(int menor, int mayor, ArbolGeneral<Integer> arbol) Para el siguiente
+ *
  * árbol, si los valores son 5 y 10, la lista debería contener los elementos 6
  * nivel 2, 5 nivel 1, 10 nivel 2. (En postorden). Para el siguiente árbol, si
  * valor es 20 y 100, la lista debería ser vacía. Para el siguiente árbol, si
@@ -64,15 +68,11 @@ public class Parcial {
             while (!h.fin()) {
                 resolver(min, max, h.proximo(), nivel + 1, lista);
             }
-            if ((a.getDato() >= min) && (a.getDato() <= max)) {
-                Datos d = new Datos(a.getDato(), nivel);
-                lista.agregarFinal(d);
-            }
-        } else {
-            if ((a.getDato() >= min) && (a.getDato() <= max)) {
-                Datos d = new Datos(a.getDato(), nivel);
-                lista.agregarFinal(d);
-            }
+        }
+        if ((a.getDato() >= min) && (a.getDato() <= max)) {
+            Datos d = new Datos(a.getDato(), nivel);
+            lista.agregarFinal(d);
         }
     }
 }
+

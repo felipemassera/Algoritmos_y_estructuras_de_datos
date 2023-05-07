@@ -8,7 +8,7 @@ public class HojaMasLejanaMain {
     public static void main(String[] args) {
 
         ArbolDePrueba a = new ArbolDePrueba();
-        HojaMasLejana h = new HojaMasLejana();
+        HojaMasLejanaGeneral h = new HojaMasLejanaGeneral();
 
         ListaGenerica<Integer> camino = h.resolver(a.getArbol());
         camino.comenzar();

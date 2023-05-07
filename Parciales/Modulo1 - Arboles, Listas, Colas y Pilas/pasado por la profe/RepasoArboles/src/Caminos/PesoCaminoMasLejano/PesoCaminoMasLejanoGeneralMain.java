@@ -3,10 +3,10 @@ package Caminos.PesoCaminoMasLejano;
 import Class.ArbolDePrueba;
 import Class.ListaGenerica;
 
-public class PesoCaminoMasLejanoMain {
+public class PesoCaminoMasLejanoGeneralMain {
     public static void main(String[] args) {
         ArbolDePrueba p= new ArbolDePrueba();
-        PesoCaminoMasLejano res = new PesoCaminoMasLejano();
+        PesoCaminoMasLejanoGeneral res = new PesoCaminoMasLejanoGeneral();
         ListaGenerica<Integer> camino = res.resolver(p.getArbol());
         camino.comenzar();
         System.out.println("El recorrido del camino con mas peso");
